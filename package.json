@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^0.6.1"
+  },
+  "dependencies": {},
+  "scripts": {
+    "build": "./node_modules/.bin/tailwind build _includes/tailwind.css -o _includes/tailwind-gen.css -c tailwind.js"
+  }
+}

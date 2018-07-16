@@ -1,0 +1,25 @@
+{% assign current = page.url | downcase  %}
+
+<nav class="flex items-center justify-between flex-wrap py-8">
+  <div class="flex items-center flex-no-shrink mr-6">
+    <a href="/" class="text-red font-semibold text-xl tracking-normal no-underline" title="Advanced CFL Stats and Fantasy Analytics">
+      Slotback<span class="text-blue">Labs</span>
+    </a>
+  </div>
+  <ul class="list-reset flex">
+    <li class="mr-6">
+      <a class="nav-link {% if current == '/' %}active{% endif %}" href="/">Air Yards</a>
+    </li>
+    <li class="mr-6">
+      <a class="nav-link" href="/coming-soon">Projections</a>
+    </li>
+    <li class="mr-6">
+      <a class="nav-link" href="/coming-soon">Lineup Builder</a>
+    </li>
+    <li>
+      <a class="bg-transparent hover:bg-blue text-blue text-lg font-medium hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded cursor-pointer" href="/coming-soon">
+        Login
+      </a>
+    </li>
+  </ul>
+</nav>

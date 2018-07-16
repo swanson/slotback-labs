@@ -1,0 +1,6 @@
+_site
+.sass-cache
+.jekyll-metadata
+_includes/tailwind-gen.css
+.env
+node_modules

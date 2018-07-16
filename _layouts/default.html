@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }} | Advanced CFL Stats &amp; Fantasy Analytics | SlotbackLabs</title>
+  <meta name="author" content="Matt Swanson" />
+  <meta name="description" content="Advanced Canadian Football (CFL) Stats and Fantasy Analytics. Tools, Projections, and Analytics for Daily Fantasy Sports (DFS)" />
+  <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/sortable.min.js"></script>
+  <script src="/js/tippy.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    {% include nav.html %}
+
+    <div class="main">
+      {{ content }}
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container">
+      {% include footer.html %}
+    </div>
+  </div>
+
+  <script>
+    tippy('.tooltip')
+  </script>
+</body>
+</html>

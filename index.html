@@ -1,0 +1,161 @@
+---
+layout: default
+title: Air Yards
+---
+
+{% assign all_data = site.data.airyards.data | sort:"air_yards_per_game" | reverse %}
+{% assign meta = site.data.airyards.meta %}
+
+<div class="bg-texture-red">
+  <h1 class="text-white font-bold tracking-wide text-2xl px-8 pb-4 pt-8 text-shadow">Air Yards</h1>
+  <h2 class="text-white font-medium tracking-wide text-xl px-8 text-shadow">2018 Season (thru Week {{ meta["week"] }})</h2>
+</div>
+
+<div class="data-container flex">
+  <table id="airyards-table" class="w-full rounded-lg bg-blue" data-sortable>
+    <thead>
+      <tr class="text-xs text-white rounded-lg subpixel-antialiased cursor-pointer">
+        <th data-sortable="false" class="data-header cursor-auto rounded-tl-lg"></th>
+        <th class="text-left data-header">Player</th>
+        <th class="data-header">GP</th>
+        <th class="data-header">Recs</th>
+        <th class="data-header">Targets</th>
+        <th class="data-header">Yards</th>
+        <th class="data-header">TD</th>
+        <th class="data-header">YAC</th>
+        <th class="data-header tooltip" 
+          data-tippy-animation="shift-away"
+          data-tippy-inertia="true"
+          data-tippy-arrow="true"
+          data-tippy-placement="top-start"
+          data-tippy-html="#air-yards-tooltip"
+        >
+          <div class="flex justify-between">
+            <div class="mr-1">Air Yards</div>
+            <svg class="fill-current text-blue-light info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9 11v4h2V9H9v2zm0-6v2h2V5H9z"/>
+            </svg>
+          </div>
+        </th>
+        <th class="data-header">Trgt /<br/>Game</th>
+        <th class="data-header">Air Yd /<br/>Game</th>
+        <th class="data-header tooltip" 
+          data-tippy-animation="shift-away"
+          data-tippy-inertia="true"
+          data-tippy-arrow="true"
+          data-tippy-placement="top-end"
+          data-tippy-html="#racr-tooltip"
+        >
+          <div class="flex justify-between">
+            <div class="mr-1">RACR</div>
+            <svg class="fill-current text-blue-light info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9 11v4h2V9H9v2zm0-6v2h2V5H9z"/>
+            </svg>
+          </div>
+        </th>
+        <th class="data-header px-2 rounded-tr-lg tooltip"
+          data-tippy-animation="shift-away"
+          data-tippy-inertia="true"
+          data-tippy-arrow="true"
+          data-tippy-placement="top-end"
+          data-tippy-html="#wopr-tooltip"
+        >
+          <div class="flex justify-between">
+            <div class="mr-1">WOPR</div>
+            <svg class="fill-current text-blue-light info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9 11v4h2V9H9v2zm0-6v2h2V5H9z"/>
+            </svg>
+          </div>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+    {% for data in all_data %}
+      <tr class="hover:bg-blue-light">
+        {% assign team = data["number"] | slice:0 | downcase %}
+        {% assign number = data["number"] | slice:1,data["number"].size %}
+        {% if data["number"] == "FA" %}
+          {% assign number = "FA" %}
+        {% endif %}
+        {% assign last_name = data["player"] | split:" " | last %}
+
+        <td class="cursor-pointer select-none" data-value="{{ last_name }}">
+          <div class="jersey jersey-{{ team }}">{{ number }}</div>
+        </td>
+        <td class="text-left" data-value="{{ last_name }}">
+          {{ data["player"] }}
+        </td>
+        <td class="text-center">{{ data["games"] }}</td>
+        <td class="text-center">{{ data["receptions"] }}</td>
+        <td class="text-center">{{ data["targets"] }}</td>
+        <td class="text-center">{{ data["yards"] }}</td>
+        <td class="text-center">{{ data["td"] }}</td>
+        <td class="text-center">{{ data["yac"] }}</td>
+        <td class="text-center">{{ data["air_yards"] }}</td>
+        <td class="text-center">{{ data["targets_per_game"] }}</td>
+        <td class="text-center">{{ data["air_yards_per_game"] }}</td>
+        <td class="text-center">{{ data["racr"] }}</td>
+        <td class="text-center">{{ data["wopr"] }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
+<div class="data-container flex">
+  <p class="mt-4 italic text-sm font-light">
+    Last updated: {{ meta["last_modified"] | date: "%B %d, %Y" }}
+  </p>
+</div>
+
+<script type="text/javascript">
+var data = {{ site.data.airyards | jsonify }};
+
+function jerseyRenderer(instance, td, row, col, prop, value, cellProperties) {
+  Handsontable.dom.empty(td);
+
+  var team = value[0];
+  var number = value.substr(1);
+
+  if (value == "FA") {
+    number = value;
+  }
+
+  var el = document.createElement("div");
+  el.innerText = number;
+  el.className = "jersey jersey-" + team.toLowerCase();
+
+  td.appendChild(el);
+}
+</script>
+
+<div id="air-yards-tooltip" class="hidden">
+  <p class="text-left w-64 my-2">
+    <b>AIR YARDS</b> are <span class="italic">intent</span>:
+    the total yards thrown to a receiver (complete and incomplete passes)
+  </p>
+  <p class="text-left">
+    Air Yards = Receiving Yards &minus; YAC
+  </p>
+</div>
+
+<div id="racr-tooltip" class="hidden">
+  <p class="text-left w-64 my-2">
+    <b>RACR</b> is <span class="italic">efficiency</span>:
+    how well does a player convert air yards into receiving yards; tends toward the league avg
+  </p>
+  <p class="text-left">
+    RACR = Receiving Yards / Air Yards
+  </p>
+</div>
+
+<div id="wopr-tooltip" class="hidden">
+  <p class="text-left my-2">
+    <b>WOPR</b> is <span class="italic">opportunity</span>:
+    weighted combination<br/> of team market share of targets and air yards<br/>
+    (based on work by Josh Hermsmeyer)
+  </p>
+  <p class="text-left">
+    WOPR = 1.5 &times; Target Share &plus; 0.7 &times; Air Yard Share
+  </p>
+</div>
