@@ -1,6 +1,6 @@
 # SlotbackLabs
 
-## Advanced Canadian Football (CFL) Stats and Fantasy Analytics
+Advanced Canadian Football (CFL) Stats and Fantasy Analytics
 
 [Live site](https://slotbacklabs.com)
 
