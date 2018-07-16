@@ -10,3 +10,4 @@ exclude:
   - .gitignore
   - yarn.lock
   - package.json
+  - README.md
