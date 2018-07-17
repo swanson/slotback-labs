@@ -134,9 +134,6 @@ function jerseyRenderer(instance, td, row, col, prop, value, cellProperties) {
     <b>AIR YARDS</b> are <span class="italic">intent</span>:
     the total yards thrown to a receiver (complete and incomplete passes)
   </p>
-  <p class="text-left">
-    Air Yards = Receiving Yards &minus; YAC
-  </p>
 </div>
 
 <div id="racr-tooltip" class="hidden">
@@ -144,7 +141,7 @@ function jerseyRenderer(instance, td, row, col, prop, value, cellProperties) {
     <b>RACR</b> is <span class="italic">efficiency</span>:
     how well does a player convert air yards into receiving yards; tends toward the league avg
   </p>
-  <p class="text-left">
+  <p class="text-left my-2">
     RACR = Receiving Yards / Air Yards
   </p>
 </div>
@@ -155,7 +152,7 @@ function jerseyRenderer(instance, td, row, col, prop, value, cellProperties) {
     weighted combination<br/> of team market share of targets and air yards<br/>
     (based on work by Josh Hermsmeyer)
   </p>
-  <p class="text-left">
+  <p class="text-left my-2">
     WOPR = 1.5 &times; Target Share &plus; 0.7 &times; Air Yard Share
   </p>
 </div>
