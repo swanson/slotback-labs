@@ -17,6 +17,15 @@
   border: 3px solid;
 }
 
+.jersey-large {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  line-height: 32px;
+  font-size: 24px;
+  border: 5px solid;
+}
+
 .jersey-t {
   background: #0C2340;
   color: #FFFFFF;
@@ -83,17 +92,17 @@ thead > tr {
   height: 56px;
 }
 
-tbody > tr {
+#airyards-table tbody > tr {
   height: 60px;
   border: 3px solid #f3f3f3;
   border-top: 0px;
 }
 
-tbody > tr:nth-child(odd) {
+.striped > tr:nth-child(odd) {
   background: #ffffff;
 }
 
-tbody > tr:nth-child(even) {
+.striped > tr:nth-child(even) {
   background: #f2f2f2;
 }
 
@@ -101,4 +110,13 @@ tbody > tr:nth-child(even) {
   height: 14px;
   width: 14px;
   margin-top: -1px;
+}
+
+.choices__inner {
+  border: 2px solid #d8d8d8;
+  border-radius: 10px;
+}
+
+.is-open .choices__inner {
+  border-radius: 10px 10px 0 0;
 }

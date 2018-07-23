@@ -1,0 +1,305 @@
+---
+layout: default
+permalink: projections
+title: GLSP Projections
+---
+
+<div class="bg-texture-blue">
+  <h1 class="text-white font-bold tracking-wide text-2xl px-8 pb-4 pt-8 text-shadow-blue">GLSP Projections</h1>
+  <h2 class="text-white font-medium tracking-wide text-xl px-8 text-shadow-blue">2018 Season &ndash; Week {{ site.data.glsp.meta.week }}</h2>
+</div>
+
+<div class="container flex bg-grey px-8 h-150 border-b-2 border-grey-dark">
+  <div class="flex-1">
+    <div class="my-8 mr-12">
+      <div class="pb-2 text-sm text-blue font-bold">Select a player...</div>
+      <select id="player-select">
+      {% for d in site.data.glsp.projections %}
+        <option value="{{ d.slug }}">{{ d.player }}</option>
+      {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="flex-1 pt-2">
+    <div class="rounded-lg bg-white p-4 -my-24 shadow-lg text-sm">
+      <p class="mb-4">
+        <a class="text-red font-bold border-dotted border-b" href="http://rotoviz.com/2014/08/game-level-similarity-projections-a-primer/">Game Level Similarity Projections</a> <b>(GLSP)</b> are a reference-class forecast model for a given player.
+      </p>
+      <p class="mb-4">We take a rolling-average profile of the player and the opposing defense and compare it to historical game logs from similar players in similar matchups to increase the sample size of outcomes.</p>
+      <p class="italic text-xs">Note: GLSP does not know anything about injuries, depth charts, or other changes in usage so you may need to adjust accordingly.</p>
+    </div>
+  </div>
+</div>
+
+<div class="flex p-8">
+  <div class="flex">
+    <div id="player-number"></div>
+    <h1 class="flex-auto text-xl font-bold ml-4" style="line-height: 50px">
+      <span id="player-name"></span>
+      <span class="ml-2 font-thin text-blue">
+        (vs <span class="opponent"></span>)
+      </span>
+    </h1>
+  </div>
+</div>
+
+<div class="flex px-8 pb-12">
+  <div class="flex-1">
+    <h2 class="text-lg mb-4">GLSP Projections</h2>
+    <div class="mr-12">
+      <div class="bg-red rounded-t-lg">
+        <div class="flex text-center text-white py-4 subpixel-antialiased">
+          <div class="flex-1">Low</div>
+          <div class="flex-1">Median</div>
+          <div class="flex-1">High</div>
+        </div>
+      </div>
+      <div class="border-2 border-t-0 border-grey-dark rounded-b-lg py-4">
+        <div class="flex text-center font-bold text-xl text-blue pb-1">
+          <div id="glsp-low" class="flex-1"></div>
+          <div id="glsp-median" class="flex-1"></div>
+          <div id="glsp-high" class="flex-1"></div>
+        </div>
+        <div class="flex text-center text-sm">
+          <div class="flex-1">fpts</div>
+          <div class="flex-1">fpts</div>
+          <div class="flex-1">fpts</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-lg mt-10 mb-4"><span class="opponent"></span> Rankings vs <span id="player-position"></span> (Past 3 Games)</h2>
+    <div class="mr-12">
+      <div class="bg-blue rounded-t-lg">
+        <div class="flex text-center text-white py-4 subpixel-antialiased">
+          <div id="rank-heading-1" class="flex-1">Catches</div>
+          <div id="rank-heading-2" class="flex-1">Yards</div>
+          <div id="rank-heading-3" class="flex-1">FPts</div>
+        </div>
+      </div>
+      <div class="bg-grey border-2 border-t-0 border-grey-dark rounded-b-lg">
+        <div id="rank-contents">
+          <div class="flex bg-white text-center font-bold text-xl text-blue pt-3 pb-1">
+            <div class="flex-1 text-green">7th</div>
+            <div class="flex-1 text-green">8th</div>
+            <div class="flex-1 text-green">7th</div>
+          </div>
+          <div class="flex bg-white text-center font-bold text-sm">
+            <div class="flex-1">65 rec</div>
+            <div class="flex-1">328 yds</div>
+            <div class="flex-1">50.1 fpts</div>
+          </div>
+          <div class="flex bg-white text-center text-sm pb-4 pt-1">
+            <div class="flex-1">per game</div>
+            <div class="flex-1">per game</div>
+            <div class="flex-1">per game</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-blue text-center p-3 italic">
+            Rankings out of 9 teams. 1st is best defense, 9th is worst.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1">
+    <h2 class="text-lg mb-4">Contributing Matchups</h2>
+    <div class="flex bg-grey border-2 border-b-0 border-grey-dark rounded-t-lg" style="margin-top: -1px">
+      <table class="flex-1">
+        <thead class="text-sm">
+          <tr class="text-left h-12">
+            <td class="pl-4 text-left">Player</td>
+            <td class="text-center">Season</td>
+            <td class="text-center">Week</td>
+            <td class="text-center">Opp</td>
+            <td class="pr-4 text-center">FPts</td>
+          </tr>
+        </thead>
+        <tbody id="contributing-matchups" class="text-sm">
+        </tbody>
+      </table>
+    </div>
+    <div class="border-2 border-t-0 border-grey-dark rounded-b-lg py-1">
+    </div>
+  </div>
+</div>
+
+<div class="container flex px-8 pb-8">
+  <p class="mt-4 italic text-sm font-light">
+    Last updated: {{ site.data.glsp.meta.last_modified | date: "%B %d, %Y" }}
+  </p>
+</div>
+
+<script id="template" type="x-tmpl-mustache">
+  <tr class="text-left bg-white h-8">
+    <td class="pl-4">[[ player ]]</td>
+    <td class="text-center">[[ season ]]</td>
+    <td class="text-center">[[ week ]]</td>
+    <td class="text-center">[[ opponent ]]</td>
+    <td class="pr-4 text-center">[[ fpts ]]</td>
+  </tr>
+</script>
+
+<script id="qbTemplate" type="x-tmpl-mustache">
+  <div class="flex bg-white text-center font-bold text-xl text-blue pt-3 pb-1">
+    <div class="flex-1 rank-[[ qb_attempts_rank ]]">[[ qb_attempts_rank ]]</div>
+    <div class="flex-1 rank-[[ qb_yards_rank ]]">[[ qb_yards_rank ]]</div>
+    <div class="flex-1 rank-[[ qb_tds_rank ]]">[[ qb_tds_rank ]]</div>
+  </div>
+  <div class="flex bg-white text-center font-bold text-sm">
+    <div class="flex-1">[[ qb_attempts ]] att</div>
+    <div class="flex-1">[[ qb_yards ]] yds</div>
+    <div class="flex-1">[[ qb_tds ]] TDs</div>
+  </div>
+  <div class="flex bg-white text-center text-sm pb-4 pt-1">
+    <div class="flex-1">per game</div>
+    <div class="flex-1">per game</div>
+    <div class="flex-1">per game</div>
+  </div>
+</script>
+
+<script id="rbTemplate" type="x-tmpl-mustache">
+  <div class="flex bg-white text-center font-bold text-xl text-blue pt-3 pb-1">
+    <div class="flex-1 rank-[[ rb_yards_rank ]]">[[ rb_yards_rank ]]</div>
+    <div class="flex-1 rank-[[ rb_rec_yds_rank ]]">[[ rb_rec_yds_rank ]]</div>
+    <div class="flex-1 rank-[[ rb_tds_rank ]]">[[ rb_tds_rank ]]</div>
+  </div>
+  <div class="flex bg-white text-center font-bold text-sm">
+    <div class="flex-1">[[ rb_yards ]] yds</div>
+    <div class="flex-1">[[ rb_rec_yds ]] yds</div>
+    <div class="flex-1">[[ rb_tds ]] TDs</div>
+  </div>
+  <div class="flex bg-white text-center text-sm pb-4 pt-1">
+    <div class="flex-1">per game</div>
+    <div class="flex-1">per game</div>
+    <div class="flex-1">per game</div>
+  </div>
+</script>
+
+<script id="wrTemplate" type="x-tmpl-mustache">
+  <div class="flex bg-white text-center font-bold text-xl text-blue pt-3 pb-1">
+    <div class="flex-1 rank-[[ wr_recs_rank ]]">[[ wr_recs_rank ]]</div>
+    <div class="flex-1 rank-[[ wr_yards_rank ]]">[[ wr_yards_rank ]]</div>
+    <div class="flex-1 rank-[[ wr_tds_rank ]]">[[ wr_tds_rank ]]</div>
+  </div>
+  <div class="flex bg-white text-center font-bold text-sm">
+    <div class="flex-1">[[ wr_recs ]] rec</div>
+    <div class="flex-1">[[ wr_yards ]] yds</div>
+    <div class="flex-1">[[ wr_tds ]] TDs</div>
+  </div>
+  <div class="flex bg-white text-center text-sm pb-4 pt-1">
+    <div class="flex-1">per game</div>
+    <div class="flex-1">per game</div>
+    <div class="flex-1">per game</div>
+  </div>
+</script>
+
+<script type="text/javascript">
+  var projections = {{ site.data.glsp.projections | jsonify }};
+
+  var template = document.getElementById("template").innerHTML;
+  Mustache.parse(template, ['[[', ']]']);
+
+  var qbTemplate = document.getElementById("qbTemplate").innerHTML;
+  Mustache.parse(qbTemplate, ['[[', ']]']);
+
+  var rbTemplate = document.getElementById("rbTemplate").innerHTML;
+  Mustache.parse(rbTemplate, ['[[', ']]']);
+
+  var wrTemplate = document.getElementById("wrTemplate").innerHTML;
+  Mustache.parse(wrTemplate, ['[[', ']]']);
+
+  function setProjections(playerSlug) {
+    var selectedProjection = projections.find(function(e) {
+      return e.slug === playerSlug;
+    });
+
+    var playerName = document.getElementById("player-name");
+    playerName.innerText = selectedProjection.player;
+
+    var playerPosition = document.getElementById("player-position");
+    playerPosition.innerText = selectedProjection.position;
+
+    var playerNumber = document.getElementById("player-number");
+    playerNumber.innerText = selectedProjection.number;
+    playerNumber.className = "jersey jersey-large";
+    playerNumber.className += " jersey-" + selectedProjection.team_abbr;
+
+    var opponent = document.getElementsByClassName("opponent");
+    for (var i = 0; i < opponent.length; i++) {
+      opponent[i].innerText = selectedProjection.opponent;
+    }
+
+    var low = document.getElementById("glsp-low");
+    low.innerText = selectedProjection.low;
+
+    var median = document.getElementById("glsp-median");
+    median.innerText = selectedProjection.median;
+
+    var high = document.getElementById("glsp-high");
+    high.innerText = selectedProjection.high;
+
+    var contributingMatchups = document.getElementById("contributing-matchups");
+    contributingMatchups.innerHTML = ""
+
+    selectedProjection.contributing_matchups.forEach(function(gameLog) {
+      contributingMatchups.innerHTML += Mustache.render(template, gameLog);
+    });
+
+    var rankHeading1 = document.getElementById("rank-heading-1");
+    var rankHeading2 = document.getElementById("rank-heading-2");
+    var rankHeading3 = document.getElementById("rank-heading-3");
+    var rankContents = document.getElementById("rank-contents");
+
+    if (selectedProjection.position === "QB") {
+      rankHeading1.innerText = "Pass Attempts";
+      rankHeading2.innerText = "Passing Yards";
+      rankHeading3.innerText = "Passing TDs";
+      rankContents.innerHTML = Mustache.render(
+        qbTemplate, 
+        selectedProjection.opponent_ranks
+      );
+
+    } else if (selectedProjection.position === "RB") {
+      rankHeading1.innerText = "Rushing Yards";
+      rankHeading2.innerText = "Receiving Yards";
+      rankHeading3.innerText = "TDs";
+      rankContents.innerHTML = Mustache.render(
+        rbTemplate, 
+        selectedProjection.opponent_ranks
+      );
+    } else {
+      rankHeading1.innerText = "Catches";
+      rankHeading2.innerText = "Receiving Yards";
+      rankHeading3.innerText = "TDs";
+      rankContents.innerHTML = Mustache.render(
+        wrTemplate, 
+        selectedProjection.opponent_ranks
+      );
+    }
+
+    history.replaceState({slug: playerSlug}, "", "/projections/" + playerSlug);
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    var playerSelect = document.getElementById("player-select");
+    choices = new Choices(playerSelect);
+
+    playerSelect.addEventListener("change", function(e) {
+      setProjections(e.detail.value);
+    });
+
+    // Check if permalinking to specific player
+    var path = location.pathname.split("/");
+    if (path.length > 2) {
+      slug = path.slice(-1)[0];
+      choices.setValueByChoice(slug);
+    } else {
+      slug = choices.getValue(0).value;
+    }
+
+    setProjections(slug);
+  });
+</script>

@@ -48,9 +48,13 @@ let colors = {
 
   'black': '#22292f',
   'grey': '#f2f2f2',
+  'grey-dark': '#d8d8d8',
   'white': '#ffffff',
 
+  'green': '#60DD49',
+  'yellow': '#FFED38',
   'red': '#f34b2b',
+  
   'red-light': '#f9adad',
   'brand': '#f34b2b',
   'blue': '#2b2d42',
@@ -459,7 +463,9 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
-    'screen': '100vh'
+    'screen': '100vh',
+    '150': '150px',
+    '50': '50px',
   },
 
 
