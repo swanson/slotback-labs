@@ -1,0 +1,54 @@
+---
+layout: default
+permalink: lineup-builder
+title: Lineup Builder
+nav: lineup-builder
+---
+
+<div class="bg-texture-green">
+  <h1 class="text-white font-bold tracking-wide text-2xl px-8 pb-4 pt-8 text-shadow-green">Lineup Builder</h1>
+</div>
+
+<script type="text/javascript">
+
+  function validateFields(result) {
+    var errors = [];
+    var fields = result.meta.fields;
+
+    var requiredFields = [
+      "player",
+      "position",
+      "team",
+      "salary",
+      "projection",
+      "asdf",
+    ];
+
+    requiredFields.forEach(function(field) {
+      if (fields.indexOf(field) === -1) {
+        errors.push("Could not find required field: " + field);
+      }
+    });
+
+    return errors;
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+    Papa.parse("/sample.csv", {
+      header: true,
+      download: true,
+      dynamicTyping: true,
+      trimHeaders: true,
+      skipEmptyLines: true,
+      complete: function(result) {
+        var errors = validateFields(result);
+
+        if (errors.length === 0) {
+          console.log("Success!");
+        } else {
+          console.log(errors);
+        }
+      }
+    });
+  });
+</script>

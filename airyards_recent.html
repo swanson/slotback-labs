@@ -1,11 +1,11 @@
 ---
 layout: airyards
 title: Air Yards
-permalink: /
+permalink: /air-yards/recent
 nav: air-yards
 ---
 
-{% assign all_data = site.data.airyards.data | sort:"air_yards_per_game" | reverse %}
+{% assign all_data = site.data.airyards_recent.data | sort:"air_yards_per_game" | reverse %}
 
 {% for data in all_data %}
   <tr class="hover:bg-blue-light">

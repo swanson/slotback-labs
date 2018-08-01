@@ -1,5 +1,5 @@
 ---
 ---
-{% include tailwind-gen.css %}
-{% include choices.css %}
-{% include custom.css %}
+{% include css/tailwind-gen.css %}
+{% include css/choices.css %}
+{% include css/custom.css %}

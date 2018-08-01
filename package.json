@@ -4,6 +4,6 @@
   },
   "dependencies": {},
   "scripts": {
-    "build": "./node_modules/.bin/tailwind build _includes/tailwind.css -o _includes/tailwind-gen.css -c tailwind.js"
+    "build": "./node_modules/.bin/tailwind build _includes/css/tailwind.css -o _includes/css/tailwind-gen.css -c tailwind.js"
   }
 }
