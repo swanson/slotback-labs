@@ -1,6 +1,6 @@
 {
   "meta": {
-    "last_modified": "2018-07-31 20:55:52 -0400",
+    "last_modified": "2018-07-31 21:54:35 -0400",
     "week": 7
   },
   "data": [
@@ -863,72 +863,6 @@
       "td": 1
     },
     {
-      "number": "S80",
-      "player": "Spencer Moore",
-      "weeks": [
-        {
-          "game_id": 2478,
-          "team_id": 7,
-          "week": 4,
-          "targets": 1,
-          "receptions": 1,
-          "yards": 6,
-          "air_yards": 3,
-          "yac": 3,
-          "td": 0,
-          "team_targets": 19,
-          "team_air_yards": 146,
-          "target_share": 0.05,
-          "air_yard_share": 0.02
-        },
-        {
-          "game_id": 2470,
-          "team_id": 7,
-          "week": 2,
-          "targets": 3,
-          "receptions": 3,
-          "yards": 30,
-          "air_yards": 4,
-          "yac": 26,
-          "td": 0,
-          "team_targets": 29,
-          "team_air_yards": 252,
-          "target_share": 0.1,
-          "air_yard_share": 0.02
-        },
-        {
-          "game_id": 2467,
-          "team_id": 7,
-          "week": 1,
-          "targets": 2,
-          "receptions": 1,
-          "yards": 12,
-          "air_yards": 4,
-          "yac": 8,
-          "td": 0,
-          "team_targets": 25,
-          "team_air_yards": 174,
-          "target_share": 0.08,
-          "air_yard_share": 0.02
-        }
-      ],
-      "team_targets": 73,
-      "team_air_yards": 572,
-      "target_share": 0.08,
-      "air_yard_share": 0.02,
-      "racr": 4.36,
-      "wopr": 0.13,
-      "games": 3,
-      "targets": 6,
-      "targets_per_game": 2.0,
-      "receptions": 5,
-      "yards": 48,
-      "air_yards": 11,
-      "air_yards_per_game": 3,
-      "yac": 37,
-      "td": 0
-    },
-    {
       "number": "S84",
       "player": "Jordan Williams Lambert",
       "weeks": [
@@ -1124,57 +1058,6 @@
       "air_yards": 60,
       "air_yards_per_game": 20,
       "yac": 0,
-      "td": 0
-    },
-    {
-      "number": "FA",
-      "player": "Brian Tyms",
-      "weeks": [
-        {
-          "game_id": 2473,
-          "team_id": 8,
-          "week": 2,
-          "targets": 7,
-          "receptions": 5,
-          "yards": 32,
-          "air_yards": 51,
-          "yac": 3,
-          "td": 0,
-          "team_targets": 30,
-          "team_air_yards": 199,
-          "target_share": 0.23,
-          "air_yard_share": 0.26
-        },
-        {
-          "game_id": 2467,
-          "team_id": 8,
-          "week": 1,
-          "targets": 5,
-          "receptions": 2,
-          "yards": 23,
-          "air_yards": 21,
-          "yac": 8,
-          "td": 0,
-          "team_targets": 36,
-          "team_air_yards": 290,
-          "target_share": 0.14,
-          "air_yard_share": 0.07
-        }
-      ],
-      "team_targets": 66,
-      "team_air_yards": 489,
-      "target_share": 0.18,
-      "air_yard_share": 0.15,
-      "racr": 0.76,
-      "wopr": 0.38,
-      "games": 2,
-      "targets": 12,
-      "targets_per_game": 6.0,
-      "receptions": 7,
-      "yards": 55,
-      "air_yards": 72,
-      "air_yards_per_game": 36,
-      "yac": 11,
       "td": 0
     },
     {
@@ -1704,72 +1587,6 @@
       "air_yards_per_game": 119,
       "yac": 35,
       "td": 0
-    },
-    {
-      "number": "H17",
-      "player": "Luke Tasker",
-      "weeks": [
-        {
-          "game_id": 2478,
-          "team_id": 4,
-          "week": 4,
-          "targets": 10,
-          "receptions": 4,
-          "yards": 49,
-          "air_yards": 80,
-          "yac": 18,
-          "td": 0,
-          "team_targets": 42,
-          "team_air_yards": 483,
-          "target_share": 0.24,
-          "air_yard_share": 0.17
-        },
-        {
-          "game_id": 2475,
-          "team_id": 4,
-          "week": 3,
-          "targets": 5,
-          "receptions": 5,
-          "yards": 56,
-          "air_yards": 38,
-          "yac": 18,
-          "td": 0,
-          "team_targets": 40,
-          "team_air_yards": 366,
-          "target_share": 0.13,
-          "air_yard_share": 0.1
-        },
-        {
-          "game_id": 2472,
-          "team_id": 4,
-          "week": 2,
-          "targets": 5,
-          "receptions": 5,
-          "yards": 103,
-          "air_yards": 52,
-          "yac": 51,
-          "td": 2,
-          "team_targets": 28,
-          "team_air_yards": 319,
-          "target_share": 0.18,
-          "air_yard_share": 0.16
-        }
-      ],
-      "team_targets": 110,
-      "team_air_yards": 1168,
-      "target_share": 0.18,
-      "air_yard_share": 0.15,
-      "racr": 1.22,
-      "wopr": 0.38,
-      "games": 3,
-      "targets": 20,
-      "targets_per_game": 6.0,
-      "receptions": 14,
-      "yards": 208,
-      "air_yards": 170,
-      "air_yards_per_game": 56,
-      "yac": 87,
-      "td": 2
     },
     {
       "number": "H12",
@@ -2825,42 +2642,6 @@
       "air_yards": 207,
       "air_yards_per_game": 69,
       "yac": 28,
-      "td": 0
-    },
-    {
-      "number": "O15",
-      "player": "Dominique Rhymes",
-      "weeks": [
-        {
-          "game_id": 2470,
-          "team_id": 6,
-          "week": 2,
-          "targets": 5,
-          "receptions": 1,
-          "yards": 1,
-          "air_yards": 18,
-          "yac": 1,
-          "td": 0,
-          "team_targets": 35,
-          "team_air_yards": 269,
-          "target_share": 0.14,
-          "air_yard_share": 0.07
-        }
-      ],
-      "team_targets": 35,
-      "team_air_yards": 269,
-      "target_share": 0.14,
-      "air_yard_share": 0.07,
-      "racr": 0.06,
-      "wopr": 0.26,
-      "games": 1,
-      "targets": 5,
-      "targets_per_game": 5.0,
-      "receptions": 1,
-      "yards": 1,
-      "air_yards": 18,
-      "air_yards_per_game": 18,
-      "yac": 1,
       "td": 0
     },
     {
