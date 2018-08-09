@@ -3137,17 +3137,17 @@
       ]
     },
     {
-      "number": "5",
+      "number": "2",
       "team_abbr": "m",
-      "player": "Drew Willy",
+      "player": "Johnny Manziel",
       "position": "QB",
-      "slug": "drew-willy",
-      "salary": "7000",
+      "slug": "johnny-manziel",
+      "salary": "8900",
       "opponent": "OTT",
       "opponent_ranks": null,
-      "low": 6.0,
-      "median": 11.2,
-      "high": 21.2,
+      "low": 2.0,
+      "median": 6.2,
+      "high": 11.2,
       "contributing_matchups": [
         {
           "player": "Rakeem Cato",
