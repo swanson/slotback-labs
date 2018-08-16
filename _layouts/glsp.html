@@ -81,7 +81,6 @@ nav: projections
           <div class="flex-1">TDs</div>
         {% else %}
           <div class="flex-1">Rushing Yards</div>
-          <div class="flex-1">Receiving Yards</div>
           <div class="flex-1">TDs</div>
         {% endif %}
         </div>
@@ -135,7 +134,9 @@ nav: projections
           <div class="flex bg-white text-center text-sm pb-4 pt-1">
             <div class="flex-1">per game</div>
             <div class="flex-1">per game</div>
+          {% if page.position != "RB" %}
             <div class="flex-1">per game</div>
+          {% endif %}
           </div>
         </div>
         <div class="text-center">
