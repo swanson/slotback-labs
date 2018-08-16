@@ -1,0 +1,203 @@
+---
+layout: default
+nav: projections
+---
+
+<div class="bg-texture-blue">
+  <h1 class="text-white font-bold tracking-wide text-2xl px-8 pb-4 pt-8 text-shadow-blue">GLSP Projections</h1>
+  <h2 class="text-white font-medium tracking-wide text-xl px-8 text-shadow-blue">2018 Season &ndash; Week {{ site.data.glsp.meta.week }}</h2>
+</div>
+
+<div class="container flex bg-grey px-8 h-150 border-b-2 border-grey-dark">
+  <div class="flex-1">
+    <div class="my-8 mr-12">
+      <div class="pb-2 text-sm text-blue font-bold">Select a player...</div>
+      <select id="player-select">
+      {% for d in site.data.glsp.projections %}
+        <option value="{{ d.id }}">{{ d.player }}</option>
+      {% endfor %}
+      </select>
+    </div>
+  </div>
+  <div class="flex-1 pt-2">
+    <div class="rounded-lg bg-white p-4 -my-24 shadow-lg text-sm">
+      <p class="mb-4">
+        <a class="text-red font-bold border-dotted border-b" href="http://rotoviz.com/2014/08/game-level-similarity-projections-a-primer/">Game Level Similarity Projections</a> <b>(GLSP)</b> are a reference-class forecast model for a given player.
+      </p>
+      <p class="mb-4">We take a rolling-average profile of the player and the opposing defense and compare it to historical game logs from similar players in similar matchups to increase the sample size of outcomes.</p>
+      <p class="italic text-xs">Note: GLSP does not know anything about injuries, depth charts, or other changes in usage so you may need to adjust accordingly.</p>
+    </div>
+  </div>
+</div>
+
+<div class="flex p-8">
+  <div class="flex">
+    <div class="jersey jersey-large jersey-{{ page.team_abbr }}">{{ page.number }}</div>
+    <h1 class="flex-auto text-xl font-bold ml-4" style="line-height: 50px">
+      {{ page.player }}
+      <span class="ml-2 font-thin text-blue">
+        (vs {{ page.opponent }})
+      </span>
+    </h1>
+  </div>
+</div>
+
+<div class="flex px-8 pb-12">
+  <div class="flex-1">
+    <h2 class="text-lg mb-4">GLSP Projections</h2>
+    <div class="mr-12">
+      <div class="bg-red rounded-t-lg">
+        <div class="flex text-center text-white py-4 subpixel-antialiased">
+          <div class="flex-1">Low</div>
+          <div class="flex-1">Median</div>
+          <div class="flex-1">High</div>
+        </div>
+      </div>
+      <div class="border-2 border-t-0 border-grey-dark rounded-b-lg py-4">
+        <div class="flex text-center font-bold text-xl text-blue pb-1">
+          <div class="flex-1">{{ page.low }}</div>
+          <div class="flex-1">{{ page.median }}</div>
+          <div class="flex-1">{{ page.high }}</div>
+        </div>
+        <div class="flex text-center text-sm">
+          <div class="flex-1">fpts</div>
+          <div class="flex-1">fpts</div>
+          <div class="flex-1">fpts</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="text-lg mt-10 mb-4">{{ page.opponent }} Rankings vs {{ page.position }} (Past 3 Games)</h2>
+    <div class="mr-12">
+      <div class="bg-blue rounded-t-lg">
+        <div class="flex text-center text-white py-4 subpixel-antialiased">
+        {% if page.position == "QB" %}
+          <div class="flex-1">Pass Attempts</div>
+          <div class="flex-1">Passing Yards</div>
+          <div class="flex-1">TDs</div>
+        {% elsif page.position == "WR" %}
+          <div class="flex-1">Catches</div>
+          <div class="flex-1">Yards</div>
+          <div class="flex-1">TDs</div>
+        {% else %}
+          <div class="flex-1">Rushing Yards</div>
+          <div class="flex-1">Receiving Yards</div>
+          <div class="flex-1">TDs</div>
+        {% endif %}
+        </div>
+      </div>
+      <div class="bg-grey border-2 border-t-0 border-grey-dark rounded-b-lg">
+        <div id="rank-contents">
+          <div class="flex bg-white text-center font-bold text-xl text-blue pt-3 pb-1">
+            {% if page.position == "QB" %}
+              <div class="flex-1 rank-{{ page.opponent_ranks.qb_attempts_rank }}">
+                {{ page.opponent_ranks.qb_attempts_rank }}
+              </div>
+              <div class="flex-1 rank-{{ page.opponent_ranks.qb_yards_rank }}">
+                {{ page.opponent_ranks.qb_yards_rank }}
+              </div>
+              <div class="flex-1 rank-{{ page.opponent_ranks.qb_tds_rank }}">
+                {{ page.opponent_ranks.qb_tds_rank }}
+              </div>
+            {% elsif page.position == "WR" %}
+              <div class="flex-1 rank-{{ page.opponent_ranks.wr_recs_rank }}">
+                {{ page.opponent_ranks.wr_recs_rank }}
+              </div>
+              <div class="flex-1 rank-{{ page.opponent_ranks.wr_yards_rank }}">
+                {{ page.opponent_ranks.wr_yards_rank }}
+              </div>
+              <div class="flex-1 rank-{{ page.opponent_ranks.wr_tds_rank }}">
+                {{ page.opponent_ranks.wr_tds_rank }}
+              </div>
+            {% else %}
+              <div class="flex-1 rank-{{ page.opponent_ranks.rb_yards_rank }}">
+                {{ page.opponent_ranks.rb_yards_rank }}
+              </div>
+              <div class="flex-1 rank-{{ page.opponent_ranks.rb_rec_yds_rank }}">
+                {{ page.opponent_ranks.rb_rec_yds_rank }}
+              </div>
+              <div class="flex-1 rank-{{ page.opponent_ranks.rb_tds_rank }}">
+                {{ page.opponent_ranks.rb_tds_rank }}
+              </div>
+            {% endif %}
+          </div>
+          <div class="flex bg-white text-center font-bold text-sm">
+            {% if page.position == "QB" %}
+              <div class="flex-1">{{ page.opponent_ranks.qb_attempts }} att</div>
+              <div class="flex-1">{{ page.opponent_ranks.qb_yards }} yds</div>
+              <div class="flex-1">{{ page.opponent_ranks.qb_tds }} TDs</div>
+            {% elsif page.position == "WR" %}
+              <div class="flex-1">{{ page.opponent_ranks.wr_recs }} catches</div>
+              <div class="flex-1">{{ page.opponent_ranks.wr_yards }} yds</div>
+              <div class="flex-1">{{ page.opponent_ranks.wr_tds }} TDs</div>
+            {% else %}
+              <div class="flex-1">{{ page.opponent_ranks.rb_yards }} yds</div>
+              <div class="flex-1">{{ page.opponent_ranks.rb_rec_yds }} yds</div>
+              <div class="flex-1">{{ page.opponent_ranks.rb_tds }} TDs</div>
+            {% endif %}
+          </div>
+          <div class="flex bg-white text-center text-sm pb-4 pt-1">
+            <div class="flex-1">per game</div>
+            <div class="flex-1">per game</div>
+            <div class="flex-1">per game</div>
+          </div>
+        </div>
+        <div class="text-center">
+          <p class="text-xs text-blue text-center p-3 italic">
+            Rankings out of 9 teams. 1st is best defense, 9th is worst.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex-1">
+    <h2 class="text-lg mb-4">Contributing Matchups</h2>
+    <div class="flex bg-grey border-2 border-b-0 border-grey-dark rounded-t-lg" style="margin-top: -1px">
+      <table class="flex-1">
+        <thead class="text-sm">
+          <tr class="text-left h-12">
+            <td class="pl-4 text-left">Player</td>
+            <td class="text-center">Season</td>
+            <td class="text-center">Week</td>
+            <td class="text-center">Opp</td>
+            <td class="pr-4 text-center">FPts</td>
+          </tr>
+        </thead>
+        <tbody id="contributing-matchups" class="text-sm">
+          {% for m in page.contributing_matchups %}
+            <tr class="text-left bg-white h-8">
+              <td class="pl-4">{{ m.player }}</td>
+              <td class="text-center">{{ m.season }}</td>
+              <td class="text-center">{{ m.week }}</td>
+              <td class="text-center">{{ m.opponent }}</td>
+              <td class="pr-4 text-center">{{ m.fpts }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="border-2 border-t-0 border-grey-dark rounded-b-lg py-1"></div>
+  </div>
+</div>
+
+<div class="container flex px-8 pb-8">
+  <p class="mt-4 italic text-sm font-light">
+    Last updated: {{ site.data.glsp.meta.last_modified | date: "%B %d, %Y" }}
+  </p>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var playerSelect = document.getElementById("player-select");
+    var choices = new Choices(playerSelect);
+    choices.setValueByChoice("{{ page.id }}");
+
+    playerSelect.addEventListener("change", function(e) {
+      window.location = "/projections/" + e.detail.value;
+    });
+
+    document.title = 
+      "GLSP | {{ page.player }} | Advanced CFL Stats &amp; Fantasy Analytics | SlotbackLabs";
+  });
+</script>

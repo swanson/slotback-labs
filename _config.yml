@@ -1,3 +1,9 @@
+page_gen:
+  - index_files: true
+    data: glsp.projections
+    template: glsp
+    name: id
+    dir: projections
 exclude:
   - Gemfile
   - Gemfile.lock
