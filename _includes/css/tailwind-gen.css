@@ -4283,7 +4283,6 @@ th[data-sorted="true"] {
 .tooltip-abbr {
   text-decoration: underline;
   text-decoration-style: dotted;
-  text-decoration-skip: edges;
 }
 
 @media (min-width: 576px) {

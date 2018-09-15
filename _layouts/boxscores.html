@@ -1,0 +1,78 @@
+---
+layout: default
+nav: boxscores
+---
+
+<div class="bg-texture-grey flex items-center">
+  <h1 class="flex-1 text-white font-bold tracking-wide text-2xl p-8 text-shadow-grey">Boxscores</h1>
+  <div class="flex-shrink mr-8" style="width: 300px">
+    <select id="player-select">
+    {% for d in site.data.boxscores.data %}
+      <option value="{{ d.id }}">{{ d.player }}</option>
+    {% endfor %}
+    </select>
+  </div>
+</div>
+
+<div class="flex px-8 py-6 bg-grey border-b-2 border-grey-dark">
+  <div class="flex items-center w-full">
+    <div class="flex-shrink jersey jersey-large jersey-{{ page.team | slice:0 | downcase }}">{{ page.number }}</div>
+    <h1 class="flex-auto text-xl font-bold ml-4">
+      {{ page.player }}
+    </h1>
+    <div class="ml-auto text-xl text-right font-thin text-blue">
+      {{ page.position }} | {{ page.team }}
+    </div>
+    </h1>
+  </div>
+</div>
+
+<div class="flex px-8 py-6">
+  <table id="boxscore-table" class="w-full rounded-lg" data-sortable>
+    <thead>
+      <tr class="text-xs text-white rounded-lg subpixel-antialiased cursor-pointer">
+        <th class="data-header rounded-tl-lg">Week</th>
+        <th class="data-header">Opponent</th>
+        <th class="data-header">Targets</th>
+        <th class="data-header">Recs</th>
+        <th class="data-header">Yards</th>
+        <th class="data-header">TD</th>
+        <th class="data-header rounded-tr-lg">FPts</th>
+      </tr>
+    </thead>
+    <tbody class="striped">
+      {% for data in page.weeks %}
+        <tr>
+          <td class="text-center">{{ data["week"] }}</td>
+          <td class="text-center">{{ data["opponent"] }}</td>
+          <td class="text-center">{{ data["targets"] }}</td>
+          <td class="text-center">{{ data["receptions"] }}</td>
+          <td class="text-center">{{ data["yards"] }}</td>
+          <td class="text-center">{{ data["td"] }}</td>
+          <td class="text-center">{{ data["fpts"] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="container flex px-8 pb-8">
+  <p class="mt-4 italic text-sm font-light">
+    Last updated: {{ site.data.boxscores.meta.last_modified | date: "%B %d, %Y" }}
+  </p>
+</div>
+
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function() {
+    var playerSelect = document.getElementById("player-select");
+    var choices = new Choices(playerSelect);
+    choices.setValueByChoice("{{ page.id }}");
+
+    playerSelect.addEventListener("change", function(e) {
+      window.location = "/boxscores/" + e.detail.value;
+    });
+
+    document.title = 
+      "Boxscores | {{ page.player }} | Advanced CFL Stats & Fantasy Analytics | SlotbackLabs";
+  });
+</script>

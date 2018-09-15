@@ -4,6 +4,11 @@ page_gen:
     template: glsp
     name: id
     dir: projections
+  - index_files: true
+    data: boxscores.data
+    template: boxscores
+    name: id
+    dir: boxscores
 exclude:
   - Gemfile
   - Gemfile.lock
