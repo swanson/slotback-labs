@@ -37,6 +37,7 @@ nav: boxscores
         <th class="data-header">Recs</th>
         <th class="data-header">Yards</th>
         <th class="data-header">TD</th>
+        <th class="data-header">Salary</th>
         <th class="data-header rounded-tr-lg">FPts</th>
       </tr>
     </thead>
@@ -49,6 +50,7 @@ nav: boxscores
           <td class="text-center">{{ data["receptions"] }}</td>
           <td class="text-center">{{ data["yards"] }}</td>
           <td class="text-center">{{ data["td"] }}</td>
+          <td class="text-center">${{ data["salary"] }}</td>
           <td class="text-center">{{ data["fpts"] }}</td>
         </tr>
       {% endfor %}
