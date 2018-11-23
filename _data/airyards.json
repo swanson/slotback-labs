@@ -13862,42 +13862,6 @@
       "td": 0
     },
     {
-      "number": "FA",
-      "player": "Seth Coate",
-      "weeks": [
-        {
-          "game_id": 2543,
-          "team_id": 6,
-          "week": 21,
-          "targets": 7,
-          "receptions": 4,
-          "yards": 53,
-          "air_yards": 108,
-          "yac": 3,
-          "td": 0,
-          "team_targets": 33,
-          "team_air_yards": 375,
-          "target_share": 0.21,
-          "air_yard_share": 0.29
-        }
-      ],
-      "team_targets": 33,
-      "team_air_yards": 375,
-      "target_share": 0.21,
-      "air_yard_share": 0.29,
-      "racr": 0.49,
-      "wopr": 0.52,
-      "games": 1,
-      "targets": 7,
-      "targets_per_game": 7.0,
-      "receptions": 4,
-      "yards": 53,
-      "air_yards": 108,
-      "air_yards_per_game": 108,
-      "yac": 3,
-      "td": 0
-    },
-    {
       "number": "W12",
       "player": "Charles Nelson",
       "weeks": [
