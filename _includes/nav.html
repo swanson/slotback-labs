@@ -2,27 +2,22 @@
 
 <nav class="flex items-center justify-between flex-wrap py-8">
   <div class="flex items-center flex-no-shrink mr-6">
-    <a href="/" class="text-red font-semibold text-xl tracking-normal no-underline" title="Advanced CFL Stats and Fantasy Analytics">
-      Slotback<span class="text-blue">Labs</span>
+    <a href="/" class="text-red-600 font-semibold text-4xl tracking-normal no-underline" title="Advanced CFL Stats and Fantasy Analytics">
+      Slotback<span class="text-gray-800">Labs</span>
     </a>
   </div>
   <ul class="list-reset flex">
     <li class="mr-6">
-      <a class="nav-link {% if nav == 'air-yards' %}active{% endif %}" href="/">Air Yards</a>
+      <a class="nav-link {% if nav == 'articles' %}active{% endif %}" href="/coming-soon">Articles</a>
     </li>
     <li class="mr-6">
       <a class="nav-link {% if nav == 'boxscores' %}active{% endif %}" href="/boxscores">Boxscores</a>
     </li>
     <li class="mr-6">
-      <a class="nav-link {% if nav == 'projections' %}active{% endif %}" href="/projections">Projections</a>
+      <a class="nav-link {% if nav == 'air-yards' %}active{% endif %}" href="/">Air Yards</a>
     </li>
     <li>
-      <a class="nav-link {% if nav == 'lineup-builder' %}active{% endif %}" href="/coming-soon">Lineup Builder</a>
-    </li>
-    <li class="hidden">
-      <a class="bg-transparent hover:bg-blue text-blue text-lg font-medium hover:text-white py-2 px-4 border border-blue hover:border-transparent rounded cursor-pointer" href="/coming-soon">
-        Login
-      </a>
+      <a class="nav-link {% if nav == 'projections' %}active{% endif %}" href="/projections">Projections</a>
     </li>
   </ul>
 </nav>

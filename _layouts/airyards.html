@@ -6,19 +6,19 @@ layout: default
 {% assign current = page.url | downcase  %}
 
 <div class="bg-texture-red">
-  <h1 class="text-white font-bold tracking-wide text-2xl px-8 pb-4 pt-8 text-shadow">Air Yards</h1>
-  
+  <h1 class="text-white font-bold tracking-wide text-6xl px-8 pb-4 pt-8 text-shadow">Air Yards</h1>
+
   <div class="flex justify-between">
-    <h2 class="flex-initial text-white font-medium tracking-wide text-xl px-8 text-shadow">2018 Season (thru Week {{ meta["week"] }})</h2>
+    <h2 class="flex-initial text-white font-medium tracking-wide text-4xl px-8 text-shadow">2018 Season (thru Week {{ meta["week"] }})</h2>
     <div class="flex px-8">
-      <a href="/" class="w-36 py-2 border-2 border-white border-r-0 rounded-l-lg text-white text-center cursor-pointer tracking-wide {% if current == '/' %}active-switch{% endif %}">Season</a>
-      <a href="/air-yards/recent" id="last-three" class="w-36 py-2 border-2 border-white border-l-0 rounded-r-lg text-white text-center cursor-pointer tracking-wide {% if current == '/air-yards/recent' %}active-switch{% endif %}">Recent</a>
+      <a href="/" class="w-40 py-2 border-2 border-white border-r-0 rounded-l-lg text-white text-center cursor-pointer tracking-wide {% if current == '/' %}active-switch{% endif %}">Season</a>
+      <a href="/air-yards/recent" id="last-three" class="w-40 py-2 border-2 border-white border-l-0 rounded-r-lg text-white text-center cursor-pointer tracking-wide {% if current == '/air-yards/recent' %}active-switch{% endif %}">Recent</a>
     </div>
   </div>
 </div>
 
 <div class="data-container flex">
-  <table id="airyards-table" class="w-full rounded-lg bg-blue" data-sortable>
+  <table id="airyards-table" class="w-full rounded-lg" data-sortable>
     <thead>
       <tr class="text-xs text-white rounded-lg subpixel-antialiased cursor-pointer">
         <th data-sortable="false" class="data-header cursor-auto rounded-tl-lg"></th>
@@ -29,7 +29,7 @@ layout: default
         <th class="data-header">Yards</th>
         <th class="data-header">TD</th>
         <th class="data-header">YAC</th>
-        <th class="data-header tooltip" 
+        <th class="data-header tooltip"
           data-tippy-animation="shift-away"
           data-tippy-inertia="true"
           data-tippy-arrow="true"
@@ -40,7 +40,7 @@ layout: default
         </th>
         <th class="data-header">Trgt /<br/>Game</th>
         <th class="data-header">Air Yd /<br/>Game</th>
-        <th class="data-header tooltip" 
+        <th class="data-header tooltip"
           data-tippy-animation="shift-away"
           data-tippy-inertia="true"
           data-tippy-arrow="true"

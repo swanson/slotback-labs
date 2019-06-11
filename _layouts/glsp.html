@@ -4,14 +4,14 @@ nav: projections
 ---
 
 <div class="bg-texture-blue">
-  <h1 class="text-white font-bold tracking-wide text-2xl px-8 pb-4 pt-8 text-shadow-blue">GLSP Projections</h1>
-  <h2 class="text-white font-medium tracking-wide text-xl px-8 text-shadow-blue">2018 Season &ndash; Week {{ site.data.glsp.meta.week }}</h2>
+  <h1 class="text-white font-bold tracking-wide text-6xl px-8 pb-4 pt-8 text-shadow-blue">GLSP Projections</h1>
+  <h2 class="text-white font-medium tracking-wide text-4xl px-8 text-shadow-blue">2018 Season &ndash; Week {{ site.data.glsp.meta.week }}</h2>
 </div>
 
-<div class="container flex bg-grey px-8 h-150 border-b-2 border-grey-dark">
+<div class="container flex bg-gray-100 px-8 h-150 border-b-2 border-gray-dark">
   <div class="flex-1">
     <div class="my-8 mr-12">
-      <div class="pb-2 text-sm text-blue font-bold">Select a player...</div>
+      <div class="pb-2 text-sm text-blue-900 font-bold">Select a player...</div>
       <select id="player-select">
       {% for d in site.data.glsp.projections %}
         <option value="{{ d.id }}">{{ d.player }}</option>
@@ -20,9 +20,9 @@ nav: projections
     </div>
   </div>
   <div class="flex-1 pt-2">
-    <div class="rounded-lg bg-white p-4 -my-24 shadow-lg text-sm">
+    <div class="rounded-lg bg-white p-4 -my-24 shadow-xl text-sm">
       <p class="mb-4">
-        <a class="text-red font-bold border-dotted border-b" href="http://rotoviz.com/2014/08/game-level-similarity-projections-a-primer/">Game Level Similarity Projections</a> <b>(GLSP)</b> are a reference-class forecast model for a given player.
+        <a class="text-red-600 font-bold border-dotted border-b border-red-600" href="http://rotoviz.com/2014/08/game-level-similarity-projections-a-primer/">Game Level Similarity Projections</a> <b>(GLSP)</b> are a reference-class forecast model for a given player.
       </p>
       <p class="mb-4">We take a rolling-average profile of the player and the opposing defense and compare it to historical game logs from similar players in similar matchups to increase the sample size of outcomes.</p>
       <p class="italic text-xs">Note: GLSP does not know anything about injuries, depth charts, or other changes in usage so you may need to adjust accordingly.</p>
@@ -35,7 +35,7 @@ nav: projections
     <div class="jersey jersey-large jersey-{{ page.team_abbr }}">{{ page.number }}</div>
     <h1 class="flex-auto text-xl font-bold ml-4" style="line-height: 50px">
       {{ page.player }}
-      <span class="ml-2 font-thin text-blue">
+      <span class="ml-2 font-thin text-blue-900">
         (vs {{ page.opponent }})
       </span>
     </h1>
@@ -44,17 +44,17 @@ nav: projections
 
 <div class="flex px-8 pb-12">
   <div class="flex-1">
-    <h2 class="text-lg mb-4">GLSP Projections</h2>
+    <h2 class="text-xl font-bold mb-4">GLSP Projections</h2>
     <div class="mr-12">
-      <div class="bg-red rounded-t-lg">
+      <div class="bg-red-600 rounded-t-lg">
         <div class="flex text-center text-white py-4 subpixel-antialiased">
           <div class="flex-1">Low</div>
           <div class="flex-1">Median</div>
           <div class="flex-1">High</div>
         </div>
       </div>
-      <div class="border-2 border-t-0 border-grey-dark rounded-b-lg py-4">
-        <div class="flex text-center font-bold text-xl text-blue pb-1">
+      <div class="border-2 border-t-0 border-gray-dark rounded-b-lg py-4">
+        <div class="flex text-center font-bold text-xl text-blue-900 pb-1">
           <div class="flex-1">{{ page.low }}</div>
           <div class="flex-1">{{ page.median }}</div>
           <div class="flex-1">{{ page.high }}</div>
@@ -67,9 +67,9 @@ nav: projections
       </div>
     </div>
 
-    <h2 class="text-lg mt-10 mb-4">{{ page.opponent }} Rankings vs {{ page.position }} (Past 3 Games)</h2>
+    <h2 class="text-xl font-bold mt-10 mb-4">{{ page.opponent }} Rankings vs {{ page.position }} (Past 3 Games)</h2>
     <div class="mr-12">
-      <div class="bg-blue rounded-t-lg">
+      <div class="bg-blue-900 rounded-t-lg">
         <div class="flex text-center text-white py-4 subpixel-antialiased">
         {% if page.position == "QB" %}
           <div class="flex-1">Pass Attempts</div>
@@ -85,9 +85,9 @@ nav: projections
         {% endif %}
         </div>
       </div>
-      <div class="bg-grey border-2 border-t-0 border-grey-dark rounded-b-lg">
+      <div class="bg-gray-100 border-2 border-t-0 border-gray-dark rounded-b-lg">
         <div id="rank-contents">
-          <div class="flex bg-white text-center font-bold text-xl text-blue pt-3 pb-1">
+          <div class="flex bg-white text-center font-bold text-xl text-blue-900 pt-3 pb-1">
             {% if page.position == "QB" %}
               <div class="flex-1 rank-{{ page.opponent_ranks.qb_attempts_rank }}">
                 {{ page.opponent_ranks.qb_attempts_rank }}
@@ -140,7 +140,7 @@ nav: projections
           </div>
         </div>
         <div class="text-center">
-          <p class="text-xs text-blue text-center p-3 italic">
+          <p class="text-xs text-blue-900 text-center p-3 italic">
             Rankings out of 9 teams. 1st is best defense, 9th is worst.
           </p>
         </div>
@@ -149,8 +149,8 @@ nav: projections
   </div>
 
   <div class="flex-1">
-    <h2 class="text-lg mb-4">Contributing Matchups</h2>
-    <div class="flex bg-grey border-2 border-b-0 border-grey-dark rounded-t-lg" style="margin-top: -1px">
+    <h2 class="text-xl font-bold mb-4">Contributing Matchups</h2>
+    <div class="flex bg-gray-100 border-2 border-b-0 border-gray-dark rounded-t-lg" style="margin-top: -1px">
       <table class="flex-1">
         <thead class="text-sm">
           <tr class="text-left h-12">
@@ -174,7 +174,7 @@ nav: projections
         </tbody>
       </table>
     </div>
-    <div class="border-2 border-t-0 border-grey-dark rounded-b-lg py-1"></div>
+    <div class="border-2 border-t-0 border-gray-dark rounded-b-lg py-1"></div>
   </div>
 </div>
 
@@ -194,7 +194,7 @@ nav: projections
       window.location = "/projections/" + e.detail.value;
     });
 
-    document.title = 
+    document.title =
       "GLSP | {{ page.player }} | Advanced CFL Stats &amp; Fantasy Analytics | SlotbackLabs";
   });
 </script>

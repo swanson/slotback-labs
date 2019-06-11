@@ -3,8 +3,8 @@ layout: default
 nav: boxscores
 ---
 
-<div class="bg-texture-grey flex items-center">
-  <h1 class="flex-1 text-white font-bold tracking-wide text-2xl p-8 text-shadow-grey">Boxscores</h1>
+<div class="bg-texture-gray flex items-center">
+  <h1 class="flex-1 text-white font-bold tracking-wide text-6xl p-8 text-shadow-gray">Boxscores</h1>
   <div class="flex-shrink mr-8" style="width: 300px">
     <select id="player-select">
     {% for d in site.data.boxscores.data %}
@@ -14,13 +14,13 @@ nav: boxscores
   </div>
 </div>
 
-<div class="flex px-8 py-6 bg-grey border-b-2 border-grey-dark">
+<div class="flex px-8 py-6 bg-gray-100 border-b-2 border-gray-dark">
   <div class="flex items-center w-full">
     <div class="flex-shrink jersey jersey-large jersey-{{ page.team | slice:0 | downcase }}">{{ page.number }}</div>
-    <h1 class="flex-auto text-xl font-bold ml-4">
+    <h1 class="flex-auto text-4xl font-bold ml-4">
       {{ page.player }}
     </h1>
-    <div class="ml-auto text-xl text-right font-thin text-blue">
+    <div class="ml-auto text-3xl text-right font-thin text-blue-900">
       {{ page.position }} | {{ page.team }}
     </div>
     </h1>
@@ -74,7 +74,7 @@ nav: boxscores
       window.location = "/boxscores/" + e.detail.value;
     });
 
-    document.title = 
+    document.title =
       "Boxscores | {{ page.player }} | Advanced CFL Stats & Fantasy Analytics | SlotbackLabs";
   });
 </script>
