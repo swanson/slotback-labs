@@ -36,7 +36,16 @@ layout: default
           data-tippy-placement="top-start"
           data-tippy-html="#air-yards-tooltip"
         >
-          <div class="tooltip-abbr">Air Yards</div>
+          <div class="tooltip-abbr">Air <br/>Yards</div>
+        </th>
+        <th class="data-header tooltip"
+          data-tippy-animation="shift-away"
+          data-tippy-inertia="true"
+          data-tippy-arrow="true"
+          data-tippy-placement="top-start"
+          data-tippy-html="#adot-tooltip"
+        >
+          <div class="tooltip-abbr">aDOT</div>
         </th>
         <th class="data-header">Trgt /<br/>Game</th>
         <th class="data-header">Air Yd /<br/>Game</th>
@@ -97,5 +106,15 @@ layout: default
   </p>
   <p class="text-left my-2">
     WOPR = 1.5 &times; Target Share &plus; 0.7 &times; Air Yard Share
+  </p>
+</div>
+
+<div id="adot-tooltip" class="hidden">
+  <p class="text-left my-2">
+    <b>aDOT</b> is <span class="italic">average depth of target</span>:
+    how many yards from the line of scrimmage is the player targeted, on average
+  </p>
+  <p class="text-left my-2">
+    aDOT = Air Yards / Targets
   </p>
 </div>

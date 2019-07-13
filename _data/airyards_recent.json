@@ -1,7 +1,7 @@
 {
   "meta": {
-    "last_modified": "2019-07-08 19:10:25 -0400",
-    "week": 4
+    "last_modified": "2019-07-12 21:41:01 -0400",
+    "week": 5
   },
   "data": [
     {
@@ -68,7 +68,8 @@
       "air_yards": 184,
       "air_yards_per_game": 61,
       "yac": 31,
-      "td": 0
+      "td": 0,
+      "adot": 15.3
     },
     {
       "number": "W1",
@@ -134,12 +135,28 @@
       "air_yards": 114,
       "air_yards_per_game": 38,
       "yac": 19,
-      "td": 1
+      "td": 1,
+      "adot": 8.8
     },
     {
       "number": "E8",
       "player": "Kenny Stafford",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 3,
+          "week": 5,
+          "targets": 2,
+          "receptions": 1,
+          "yards": 7,
+          "air_yards": 47,
+          "yac": 0,
+          "td": 0,
+          "team_targets": 27,
+          "team_air_yards": 196,
+          "target_share": 0.07,
+          "air_yard_share": 0.24
+        },
         {
           "game_id": 2568,
           "team_id": 3,
@@ -169,43 +186,44 @@
           "team_air_yards": 216,
           "target_share": 0.09,
           "air_yard_share": 0.05
-        },
-        {
-          "game_id": 2562,
-          "team_id": 3,
-          "week": 1,
-          "targets": 10,
-          "receptions": 7,
-          "yards": 98,
-          "air_yards": 108,
-          "yac": 41,
-          "td": 2,
-          "team_targets": 41,
-          "team_air_yards": 346,
-          "target_share": 0.24,
-          "air_yard_share": 0.31
         }
       ],
-      "team_targets": 128,
-      "team_air_yards": 871,
-      "target_share": 0.19,
-      "air_yard_share": 0.24,
-      "racr": 1.07,
-      "wopr": 0.45,
+      "team_targets": 114,
+      "team_air_yards": 721,
+      "target_share": 0.14,
+      "air_yard_share": 0.2,
+      "racr": 0.9,
+      "wopr": 0.35,
       "games": 3,
-      "targets": 24,
-      "targets_per_game": 8,
-      "receptions": 17,
-      "yards": 221,
-      "air_yards": 206,
-      "air_yards_per_game": 68,
-      "yac": 76,
-      "td": 2
+      "targets": 16,
+      "targets_per_game": 5,
+      "receptions": 11,
+      "yards": 130,
+      "air_yards": 145,
+      "air_yards_per_game": 48,
+      "yac": 35,
+      "td": 0,
+      "adot": 9.1
     },
     {
       "number": "E3",
       "player": "Natey Adjei",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 3,
+          "week": 5,
+          "targets": 4,
+          "receptions": 4,
+          "yards": 106,
+          "air_yards": 13,
+          "yac": 93,
+          "td": 1,
+          "team_targets": 27,
+          "team_air_yards": 196,
+          "target_share": 0.15,
+          "air_yard_share": 0.07
+        },
         {
           "game_id": 2568,
           "team_id": 3,
@@ -235,38 +253,24 @@
           "team_air_yards": 216,
           "target_share": 0.12,
           "air_yard_share": 0.08
-        },
-        {
-          "game_id": 2562,
-          "team_id": 3,
-          "week": 1,
-          "targets": 4,
-          "receptions": 4,
-          "yards": 54,
-          "air_yards": 28,
-          "yac": 26,
-          "td": 0,
-          "team_targets": 41,
-          "team_air_yards": 346,
-          "target_share": 0.1,
-          "air_yard_share": 0.08
         }
       ],
-      "team_targets": 128,
-      "team_air_yards": 871,
-      "target_share": 0.11,
+      "team_targets": 114,
+      "team_air_yards": 721,
+      "target_share": 0.12,
       "air_yard_share": 0.08,
-      "racr": 1.43,
-      "wopr": 0.22,
+      "racr": 2.76,
+      "wopr": 0.24,
       "games": 3,
       "targets": 14,
       "targets_per_game": 4,
       "receptions": 11,
-      "yards": 100,
-      "air_yards": 70,
-      "air_yards_per_game": 23,
-      "yac": 44,
-      "td": 0
+      "yards": 152,
+      "air_yards": 55,
+      "air_yards_per_game": 18,
+      "yac": 111,
+      "td": 1,
+      "adot": 3.9
     },
     {
       "number": "W10",
@@ -332,7 +336,8 @@
       "air_yards": 102,
       "air_yards_per_game": 34,
       "yac": 62,
-      "td": 1
+      "td": 1,
+      "adot": 7.8
     },
     {
       "number": "W82",
@@ -398,7 +403,8 @@
       "air_yards": 110,
       "air_yards_per_game": 36,
       "yac": 19,
-      "td": 3
+      "td": 3,
+      "adot": 9.2
     },
     {
       "number": "T19",
@@ -464,12 +470,28 @@
       "air_yards": 219,
       "air_yards_per_game": 73,
       "yac": 35,
-      "td": 0
+      "td": 0,
+      "adot": 10.4
     },
     {
       "number": "B89",
       "player": "Duron Carter",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 1,
+          "week": 5,
+          "targets": 7,
+          "receptions": 3,
+          "yards": 27,
+          "air_yards": 24,
+          "yac": 14,
+          "td": 0,
+          "team_targets": 24,
+          "team_air_yards": 135,
+          "target_share": 0.29,
+          "air_yard_share": 0.18
+        },
         {
           "game_id": 2574,
           "team_id": 1,
@@ -499,38 +521,24 @@
           "team_air_yards": 255,
           "target_share": 0.21,
           "air_yard_share": 0.31
-        },
-        {
-          "game_id": 2566,
-          "team_id": 1,
-          "week": 2,
-          "targets": 9,
-          "receptions": 6,
-          "yards": 42,
-          "air_yards": 36,
-          "yac": 6,
-          "td": 0,
-          "team_targets": 25,
-          "team_air_yards": 222,
-          "target_share": 0.36,
-          "air_yard_share": 0.16
         }
       ],
-      "team_targets": 99,
-      "team_air_yards": 698,
-      "target_share": 0.21,
+      "team_targets": 98,
+      "team_air_yards": 611,
+      "target_share": 0.19,
       "air_yard_share": 0.17,
-      "racr": 0.96,
-      "wopr": 0.43,
+      "racr": 0.92,
+      "wopr": 0.4,
       "games": 3,
-      "targets": 21,
-      "targets_per_game": 7,
-      "receptions": 15,
-      "yards": 113,
-      "air_yards": 118,
-      "air_yards_per_game": 39,
-      "yac": 42,
-      "td": 0
+      "targets": 19,
+      "targets_per_game": 6,
+      "receptions": 12,
+      "yards": 98,
+      "air_yards": 106,
+      "air_yards_per_game": 35,
+      "yac": 50,
+      "td": 0,
+      "adot": 5.6
     },
     {
       "number": "T10",
@@ -596,7 +604,8 @@
       "air_yards": 267,
       "air_yards_per_game": 89,
       "yac": 47,
-      "td": 1
+      "td": 1,
+      "adot": 14.8
     },
     {
       "number": "S82",
@@ -662,7 +671,8 @@
       "air_yards": 200,
       "air_yards_per_game": 66,
       "yac": 47,
-      "td": 0
+      "td": 0,
+      "adot": 9.5
     },
     {
       "number": "O80",
@@ -728,7 +738,8 @@
       "air_yards": 120,
       "air_yards_per_game": 40,
       "yac": 46,
-      "td": 0
+      "td": 0,
+      "adot": 6.3
     },
     {
       "number": "T88",
@@ -794,7 +805,8 @@
       "air_yards": 63,
       "air_yards_per_game": 21,
       "yac": 17,
-      "td": 0
+      "td": 0,
+      "adot": 6.3
     },
     {
       "number": "C84",
@@ -860,7 +872,45 @@
       "air_yards": 124,
       "air_yards_per_game": 41,
       "yac": 89,
-      "td": 1
+      "td": 1,
+      "adot": 6.9
+    },
+    {
+      "number": "C89",
+      "player": "DaVaris Daniels",
+      "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 3,
+          "week": 5,
+          "targets": 6,
+          "receptions": 4,
+          "yards": 53,
+          "air_yards": 47,
+          "yac": 11,
+          "td": 1,
+          "team_targets": 27,
+          "team_air_yards": 196,
+          "target_share": 0.22,
+          "air_yard_share": 0.24
+        }
+      ],
+      "team_targets": 27,
+      "team_air_yards": 196,
+      "target_share": 0.22,
+      "air_yard_share": 0.24,
+      "racr": 1.13,
+      "wopr": 0.5,
+      "games": 1,
+      "targets": 6,
+      "targets_per_game": 6,
+      "receptions": 4,
+      "yards": 53,
+      "air_yards": 47,
+      "air_yards_per_game": 47,
+      "yac": 11,
+      "td": 1,
+      "adot": 7.8
     },
     {
       "number": "H16",
@@ -926,7 +976,8 @@
       "air_yards": 204,
       "air_yards_per_game": 68,
       "yac": 155,
-      "td": 0
+      "td": 0,
+      "adot": 7.8
     },
     {
       "number": "H17",
@@ -977,7 +1028,8 @@
       "air_yards": 76,
       "air_yards_per_game": 38,
       "yac": 16,
-      "td": 0
+      "td": 0,
+      "adot": 6.9
     },
     {
       "number": "H12",
@@ -1043,7 +1095,8 @@
       "air_yards": 86,
       "air_yards_per_game": 28,
       "yac": 25,
-      "td": 0
+      "td": 0,
+      "adot": 12.3
     },
     {
       "number": "C15",
@@ -1109,7 +1162,8 @@
       "air_yards": 241,
       "air_yards_per_game": 80,
       "yac": 26,
-      "td": 4
+      "td": 4,
+      "adot": 10.0
     },
     {
       "number": "C82",
@@ -1160,7 +1214,8 @@
       "air_yards": 128,
       "air_yards_per_game": 64,
       "yac": 8,
-      "td": 1
+      "td": 1,
+      "adot": 18.3
     },
     {
       "number": "C87",
@@ -1211,12 +1266,28 @@
       "air_yards": 40,
       "air_yards_per_game": 20,
       "yac": 16,
-      "td": 0
+      "td": 0,
+      "adot": 10.0
     },
     {
       "number": "B88",
       "player": "Shaquille Johnson",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 1,
+          "week": 5,
+          "targets": 3,
+          "receptions": 3,
+          "yards": 19,
+          "air_yards": 19,
+          "yac": 0,
+          "td": 0,
+          "team_targets": 24,
+          "team_air_yards": 135,
+          "target_share": 0.13,
+          "air_yard_share": 0.14
+        },
         {
           "game_id": 2574,
           "team_id": 1,
@@ -1246,43 +1317,44 @@
           "team_air_yards": 255,
           "target_share": 0.02,
           "air_yard_share": 0.05
-        },
-        {
-          "game_id": 2566,
-          "team_id": 1,
-          "week": 2,
-          "targets": 5,
-          "receptions": 2,
-          "yards": 41,
-          "air_yards": 71,
-          "yac": 4,
-          "td": 0,
-          "team_targets": 25,
-          "team_air_yards": 222,
-          "target_share": 0.2,
-          "air_yard_share": 0.32
         }
       ],
-      "team_targets": 99,
-      "team_air_yards": 698,
-      "target_share": 0.09,
-      "air_yard_share": 0.15,
-      "racr": 0.81,
-      "wopr": 0.24,
+      "team_targets": 98,
+      "team_air_yards": 611,
+      "target_share": 0.07,
+      "air_yard_share": 0.09,
+      "racr": 1.18,
+      "wopr": 0.17,
       "games": 3,
-      "targets": 9,
-      "targets_per_game": 3,
-      "receptions": 6,
-      "yards": 87,
-      "air_yards": 107,
-      "air_yards_per_game": 35,
-      "yac": 14,
-      "td": 0
+      "targets": 7,
+      "targets_per_game": 2,
+      "receptions": 7,
+      "yards": 65,
+      "air_yards": 55,
+      "air_yards_per_game": 18,
+      "yac": 10,
+      "td": 0,
+      "adot": 7.9
     },
     {
       "number": "B16",
       "player": "Bryan Burnham",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 1,
+          "week": 5,
+          "targets": 5,
+          "receptions": 4,
+          "yards": 69,
+          "air_yards": 55,
+          "yac": 14,
+          "td": 0,
+          "team_targets": 24,
+          "team_air_yards": 135,
+          "target_share": 0.21,
+          "air_yard_share": 0.41
+        },
         {
           "game_id": 2570,
           "team_id": 1,
@@ -1312,38 +1384,24 @@
           "team_air_yards": 222,
           "target_share": 0.16,
           "air_yard_share": 0.41
-        },
-        {
-          "game_id": 2564,
-          "team_id": 1,
-          "week": 1,
-          "targets": 11,
-          "receptions": 5,
-          "yards": 153,
-          "air_yards": 210,
-          "yac": 56,
-          "td": 0,
-          "team_targets": 37,
-          "team_air_yards": 467,
-          "target_share": 0.3,
-          "air_yard_share": 0.45
         }
       ],
-      "team_targets": 104,
-      "team_air_yards": 944,
-      "target_share": 0.27,
-      "air_yard_share": 0.4,
-      "racr": 0.74,
-      "wopr": 0.69,
+      "team_targets": 91,
+      "team_air_yards": 612,
+      "target_share": 0.24,
+      "air_yard_share": 0.37,
+      "racr": 0.88,
+      "wopr": 0.62,
       "games": 3,
-      "targets": 28,
-      "targets_per_game": 9,
-      "receptions": 16,
-      "yards": 280,
-      "air_yards": 379,
-      "air_yards_per_game": 126,
-      "yac": 97,
-      "td": 0
+      "targets": 22,
+      "targets_per_game": 7,
+      "receptions": 15,
+      "yards": 196,
+      "air_yards": 224,
+      "air_yards_per_game": 74,
+      "yac": 55,
+      "td": 0,
+      "adot": 10.2
     },
     {
       "number": "M85",
@@ -1409,7 +1467,8 @@
       "air_yards": 186,
       "air_yards_per_game": 62,
       "yac": 82,
-      "td": 1
+      "td": 1,
+      "adot": 8.9
     },
     {
       "number": "M87",
@@ -1475,12 +1534,28 @@
       "air_yards": 89,
       "air_yards_per_game": 29,
       "yac": 31,
-      "td": 0
+      "td": 0,
+      "adot": 8.9
     },
     {
       "number": "E13",
       "player": "Ricky Collins",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 3,
+          "week": 5,
+          "targets": 2,
+          "receptions": 1,
+          "yards": 14,
+          "air_yards": 14,
+          "yac": 1,
+          "td": 0,
+          "team_targets": 27,
+          "team_air_yards": 196,
+          "target_share": 0.07,
+          "air_yard_share": 0.07
+        },
         {
           "game_id": 2568,
           "team_id": 3,
@@ -1510,38 +1585,24 @@
           "team_air_yards": 216,
           "target_share": 0.15,
           "air_yard_share": 0.09
-        },
-        {
-          "game_id": 2562,
-          "team_id": 3,
-          "week": 1,
-          "targets": 12,
-          "receptions": 9,
-          "yards": 175,
-          "air_yards": 126,
-          "yac": 76,
-          "td": 0,
-          "team_targets": 41,
-          "team_air_yards": 346,
-          "target_share": 0.29,
-          "air_yard_share": 0.36
         }
       ],
-      "team_targets": 128,
-      "team_air_yards": 871,
-      "target_share": 0.24,
-      "air_yard_share": 0.24,
-      "racr": 1.43,
-      "wopr": 0.53,
+      "team_targets": 114,
+      "team_air_yards": 721,
+      "target_share": 0.18,
+      "air_yard_share": 0.13,
+      "racr": 1.42,
+      "wopr": 0.36,
       "games": 3,
-      "targets": 31,
-      "targets_per_game": 10,
-      "receptions": 18,
-      "yards": 293,
-      "air_yards": 205,
-      "air_yards_per_game": 68,
-      "yac": 156,
-      "td": 0
+      "targets": 21,
+      "targets_per_game": 7,
+      "receptions": 10,
+      "yards": 132,
+      "air_yards": 93,
+      "air_yards_per_game": 31,
+      "yac": 81,
+      "td": 0,
+      "adot": 4.4
     },
     {
       "number": "B18",
@@ -1607,7 +1668,8 @@
       "air_yards": 44,
       "air_yards_per_game": 14,
       "yac": 27,
-      "td": 1
+      "td": 1,
+      "adot": 7.3
     },
     {
       "number": "O88",
@@ -1673,12 +1735,28 @@
       "air_yards": 102,
       "air_yards_per_game": 34,
       "yac": 48,
-      "td": 0
+      "td": 0,
+      "adot": 5.4
     },
     {
       "number": "E82",
       "player": "Greg Ellingson",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 3,
+          "week": 5,
+          "targets": 7,
+          "receptions": 6,
+          "yards": 66,
+          "air_yards": 68,
+          "yac": 33,
+          "td": 0,
+          "team_targets": 27,
+          "team_air_yards": 196,
+          "target_share": 0.26,
+          "air_yard_share": 0.35
+        },
         {
           "game_id": 2568,
           "team_id": 3,
@@ -1708,38 +1786,24 @@
           "team_air_yards": 216,
           "target_share": 0.3,
           "air_yard_share": 0.47
-        },
-        {
-          "game_id": 2562,
-          "team_id": 3,
-          "week": 1,
-          "targets": 7,
-          "receptions": 5,
-          "yards": 66,
-          "air_yards": 43,
-          "yac": 23,
-          "td": 0,
-          "team_targets": 41,
-          "team_air_yards": 346,
-          "target_share": 0.17,
-          "air_yard_share": 0.12
         }
       ],
-      "team_targets": 128,
-      "team_air_yards": 871,
-      "target_share": 0.21,
-      "air_yard_share": 0.23,
-      "racr": 1.6,
-      "wopr": 0.48,
+      "team_targets": 114,
+      "team_air_yards": 721,
+      "target_share": 0.24,
+      "air_yard_share": 0.31,
+      "racr": 1.42,
+      "wopr": 0.58,
       "games": 3,
       "targets": 27,
       "targets_per_game": 9,
-      "receptions": 21,
+      "receptions": 22,
       "yards": 313,
-      "air_yards": 196,
-      "air_yards_per_game": 65,
-      "yac": 134,
-      "td": 2
+      "air_yards": 221,
+      "air_yards_per_game": 73,
+      "yac": 144,
+      "td": 2,
+      "adot": 8.2
     },
     {
       "number": "O15",
@@ -1805,7 +1869,8 @@
       "air_yards": 209,
       "air_yards_per_game": 69,
       "yac": 37,
-      "td": 1
+      "td": 1,
+      "adot": 9.1
     },
     {
       "number": "S1",
@@ -1871,7 +1936,8 @@
       "air_yards": 221,
       "air_yards_per_game": 73,
       "yac": 51,
-      "td": 1
+      "td": 1,
+      "adot": 10.5
     },
     {
       "number": "W13",
@@ -1907,12 +1973,28 @@
       "air_yards": 18,
       "air_yards_per_game": 18,
       "yac": 0,
-      "td": 0
+      "td": 0,
+      "adot": 6.0
     },
     {
       "number": "B1",
       "player": "Lemar Durant",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 1,
+          "week": 5,
+          "targets": 3,
+          "receptions": 1,
+          "yards": 5,
+          "air_yards": 19,
+          "yac": 5,
+          "td": 0,
+          "team_targets": 24,
+          "team_air_yards": 135,
+          "target_share": 0.13,
+          "air_yard_share": 0.14
+        },
         {
           "game_id": 2574,
           "team_id": 1,
@@ -1942,38 +2024,24 @@
           "team_air_yards": 255,
           "target_share": 0.12,
           "air_yard_share": 0.25
-        },
-        {
-          "game_id": 2566,
-          "team_id": 1,
-          "week": 2,
-          "targets": 5,
-          "receptions": 3,
-          "yards": 25,
-          "air_yards": 18,
-          "yac": 7,
-          "td": 1,
-          "team_targets": 25,
-          "team_air_yards": 222,
-          "target_share": 0.2,
-          "air_yard_share": 0.08
         }
       ],
-      "team_targets": 99,
-      "team_air_yards": 698,
-      "target_share": 0.21,
-      "air_yard_share": 0.26,
-      "racr": 1.27,
+      "team_targets": 98,
+      "team_air_yards": 611,
+      "target_share": 0.19,
+      "air_yard_share": 0.3,
+      "racr": 1.15,
       "wopr": 0.5,
       "games": 3,
-      "targets": 21,
-      "targets_per_game": 7,
-      "receptions": 17,
-      "yards": 233,
-      "air_yards": 184,
+      "targets": 19,
+      "targets_per_game": 6,
+      "receptions": 15,
+      "yards": 213,
+      "air_yards": 185,
       "air_yards_per_game": 61,
-      "yac": 75,
-      "td": 3
+      "yac": 73,
+      "td": 2,
+      "adot": 9.7
     },
     {
       "number": "O84",
@@ -2039,7 +2107,8 @@
       "air_yards": 266,
       "air_yards_per_game": 88,
       "yac": 58,
-      "td": 1
+      "td": 1,
+      "adot": 11.1
     },
     {
       "number": "T84",
@@ -2105,7 +2174,8 @@
       "air_yards": 107,
       "air_yards_per_game": 35,
       "yac": 63,
-      "td": 1
+      "td": 1,
+      "adot": 5.1
     },
     {
       "number": "O83",
@@ -2141,7 +2211,8 @@
       "air_yards": 38,
       "air_yards_per_game": 38,
       "yac": 4,
-      "td": 0
+      "td": 0,
+      "adot": 9.5
     },
     {
       "number": "T1",
@@ -2177,7 +2248,8 @@
       "air_yards": 26,
       "air_yards_per_game": 26,
       "yac": 35,
-      "td": 0
+      "td": 0,
+      "adot": 4.3
     },
     {
       "number": "S85",
@@ -2243,7 +2315,8 @@
       "air_yards": 122,
       "air_yards_per_game": 40,
       "yac": 139,
-      "td": 1
+      "td": 1,
+      "adot": 7.2
     },
     {
       "number": "M5",
@@ -2294,7 +2367,8 @@
       "air_yards": 138,
       "air_yards_per_game": 69,
       "yac": 5,
-      "td": 1
+      "td": 1,
+      "adot": 11.5
     },
     {
       "number": "H86",
@@ -2360,7 +2434,8 @@
       "air_yards": 135,
       "air_yards_per_game": 45,
       "yac": 128,
-      "td": 3
+      "td": 3,
+      "adot": 6.4
     },
     {
       "number": "C83",
@@ -2426,7 +2501,8 @@
       "air_yards": 184,
       "air_yards_per_game": 61,
       "yac": 67,
-      "td": 0
+      "td": 0,
+      "adot": 9.7
     },
     {
       "number": "C81",
@@ -2477,7 +2553,8 @@
       "air_yards": 35,
       "air_yards_per_game": 17,
       "yac": 3,
-      "td": 0
+      "td": 0,
+      "adot": 7.0
     },
     {
       "number": "S20",
@@ -2543,7 +2620,8 @@
       "air_yards": 96,
       "air_yards_per_game": 32,
       "yac": 65,
-      "td": 0
+      "td": 0,
+      "adot": 8.0
     },
     {
       "number": "H15",
@@ -2609,12 +2687,28 @@
       "air_yards": 76,
       "air_yards_per_game": 25,
       "yac": 43,
-      "td": 1
+      "td": 1,
+      "adot": 5.4
     },
     {
       "number": "E4",
       "player": "Tevaun Smith",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 3,
+          "week": 5,
+          "targets": 1,
+          "receptions": 1,
+          "yards": 6,
+          "air_yards": 4,
+          "yac": 2,
+          "td": 0,
+          "team_targets": 27,
+          "team_air_yards": 196,
+          "target_share": 0.04,
+          "air_yard_share": 0.02
+        },
         {
           "game_id": 2568,
           "team_id": 3,
@@ -2644,38 +2738,24 @@
           "team_air_yards": 216,
           "target_share": 0.18,
           "air_yard_share": 0.31
-        },
-        {
-          "game_id": 2562,
-          "team_id": 3,
-          "week": 1,
-          "targets": 3,
-          "receptions": 2,
-          "yards": 13,
-          "air_yards": 18,
-          "yac": 0,
-          "td": 0,
-          "team_targets": 41,
-          "team_air_yards": 346,
-          "target_share": 0.07,
-          "air_yard_share": 0.05
         }
       ],
-      "team_targets": 128,
-      "team_air_yards": 871,
-      "target_share": 0.12,
-      "air_yard_share": 0.18,
-      "racr": 0.38,
+      "team_targets": 114,
+      "team_air_yards": 721,
+      "target_share": 0.11,
+      "air_yard_share": 0.2,
+      "racr": 0.37,
       "wopr": 0.31,
       "games": 3,
-      "targets": 15,
-      "targets_per_game": 5,
-      "receptions": 9,
-      "yards": 60,
-      "air_yards": 156,
-      "air_yards_per_game": 52,
-      "yac": 17,
-      "td": 1
+      "targets": 13,
+      "targets_per_game": 4,
+      "receptions": 8,
+      "yards": 53,
+      "air_yards": 142,
+      "air_yards_per_game": 47,
+      "yac": 19,
+      "td": 1,
+      "adot": 10.9
     },
     {
       "number": "C81",
@@ -2741,7 +2821,8 @@
       "air_yards": 145,
       "air_yards_per_game": 48,
       "yac": 21,
-      "td": 0
+      "td": 0,
+      "adot": 14.5
     },
     {
       "number": "W7",
@@ -2807,12 +2888,28 @@
       "air_yards": 139,
       "air_yards_per_game": 46,
       "yac": 100,
-      "td": 2
+      "td": 2,
+      "adot": 10.7
     },
     {
       "number": "B86",
       "player": "Jevon Cottoy",
       "weeks": [
+        {
+          "game_id": 2576,
+          "team_id": 1,
+          "week": 5,
+          "targets": 2,
+          "receptions": 2,
+          "yards": 13,
+          "air_yards": 15,
+          "yac": -2,
+          "td": 0,
+          "team_targets": 24,
+          "team_air_yards": 135,
+          "target_share": 0.08,
+          "air_yard_share": 0.11
+        },
         {
           "game_id": 2574,
           "team_id": 1,
@@ -2842,38 +2939,24 @@
           "team_air_yards": 255,
           "target_share": 0.07,
           "air_yard_share": 0.02
-        },
-        {
-          "game_id": 2564,
-          "team_id": 1,
-          "week": 1,
-          "targets": 1,
-          "receptions": 1,
-          "yards": 6,
-          "air_yards": 4,
-          "yac": 2,
-          "td": 0,
-          "team_targets": 37,
-          "team_air_yards": 467,
-          "target_share": 0.03,
-          "air_yard_share": 0.01
         }
       ],
-      "team_targets": 111,
-      "team_air_yards": 943,
-      "target_share": 0.07,
-      "air_yard_share": 0.04,
-      "racr": 1.74,
-      "wopr": 0.13,
+      "team_targets": 98,
+      "team_air_yards": 611,
+      "target_share": 0.09,
+      "air_yard_share": 0.08,
+      "racr": 1.5,
+      "wopr": 0.19,
       "games": 3,
-      "targets": 8,
-      "targets_per_game": 2,
-      "receptions": 7,
-      "yards": 68,
-      "air_yards": 39,
-      "air_yards_per_game": 13,
-      "yac": 36,
-      "td": 0
+      "targets": 9,
+      "targets_per_game": 3,
+      "receptions": 8,
+      "yards": 75,
+      "air_yards": 50,
+      "air_yards_per_game": 16,
+      "yac": 32,
+      "td": 0,
+      "adot": 5.6
     },
     {
       "number": "H80",
@@ -2939,7 +3022,8 @@
       "air_yards": 130,
       "air_yards_per_game": 43,
       "yac": 66,
-      "td": 1
+      "td": 1,
+      "adot": 8.1
     },
     {
       "number": "M9",
@@ -2990,7 +3074,8 @@
       "air_yards": 71,
       "air_yards_per_game": 35,
       "yac": 3,
-      "td": 1
+      "td": 1,
+      "adot": 14.2
     },
     {
       "number": "S18",
@@ -3041,7 +3126,8 @@
       "air_yards": 68,
       "air_yards_per_game": 34,
       "yac": 18,
-      "td": 0
+      "td": 0,
+      "adot": 7.6
     },
     {
       "number": "M4",
@@ -3077,7 +3163,8 @@
       "air_yards": 78,
       "air_yards_per_game": 78,
       "yac": 23,
-      "td": 0
+      "td": 0,
+      "adot": 7.1
     }
   ]
 }
