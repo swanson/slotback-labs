@@ -1,0 +1,33 @@
+---
+layout: default
+permalink: all_projections
+title: GLSP Projections
+nav: projections
+---
+
+<table class="w-full rounded-lg overflow-hidden">
+  <thead>
+    <tr class="font-bold bg-gray-800 text-white border-b">
+      <td class="pl-6">Week {{ site.data.glsp.meta.week }} GLSP Projections</td>
+      <td class="text-center">Position</td>
+      <td class="text-center">Salary</td>
+      <td class="text-center">Opponent</td>
+      <td class="text-center">Low</td>
+      <td class="text-center">Median</td>
+      <td class="text-center">High</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for d in site.data.glsp.projections %}
+      <tr class="border-b">
+        <td class="pl-6 py-4">{{ d.player }}</td>
+        <td class="text-center">{{ d.position }}</td>
+        <td class="text-center">{{ d.salary }}</td>
+        <td class="text-center">{{ d.opponent }}</td>
+        <td class="text-center">{{ d.low }}</td>
+        <td class="text-center">{{ d.median }}</td>
+        <td class="text-center">{{ d.high }}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
