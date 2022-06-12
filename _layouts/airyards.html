@@ -2,17 +2,83 @@
 layout: default
 ---
 
-{% assign meta = site.data.airyards.meta %}
-{% assign current = page.url | downcase  %}
+{% assign meta = site.data.airyards.meta %} {% assign current = page.url |
+downcase %}
 
 <div class="bg-texture-red">
-  <h1 class="text-white font-bold tracking-wide text-6xl px-8 pb-4 pt-8 text-shadow">Air Yards</h1>
+  <h1
+    class="
+      text-white
+      font-bold
+      tracking-wide
+      text-6xl
+      px-8
+      pb-4
+      pt-8
+      text-shadow
+    "
+  >
+    Air Yards
+  </h1>
 
   <div class="flex justify-between">
-    <h2 class="flex-initial text-white font-medium tracking-wide text-4xl px-8 text-shadow">2021 Season (thru Week {{ meta["week"] }})</h2>
+    <h2
+      class="
+        flex-initial
+        text-white
+        font-medium
+        tracking-wide
+        text-4xl
+        px-8
+        text-shadow
+      "
+    >
+      2022 Season (thru Week {{ meta["week"] }})
+    </h2>
     <div class="flex px-8">
-      <a href="/" class="w-40 py-2 border-2 border-white border-r-0 rounded-l-lg text-white text-center cursor-pointer tracking-wide {% if current == '/' %}active-switch{% endif %}">Season</a>
-      <a href="/air-yards/recent" id="last-three" class="w-40 py-2 border-2 border-white border-l-0 rounded-r-lg text-white text-center cursor-pointer tracking-wide {% if current == '/air-yards/recent' %}active-switch{% endif %}">Recent</a>
+      <a
+        href="/"
+        class="
+          w-40
+          py-2
+          border-2 border-white border-r-0
+          rounded-l-lg
+          text-white text-center
+          cursor-pointer
+          tracking-wide
+          {%
+          if
+          current
+          ==
+          '/'
+          %}active-switch{%
+          endif
+          %}
+        "
+        >Season</a
+      >
+      <a
+        href="/air-yards/recent"
+        id="last-three"
+        class="
+          w-40
+          py-2
+          border-2 border-white border-l-0
+          rounded-r-lg
+          text-white text-center
+          cursor-pointer
+          tracking-wide
+          {%
+          if
+          current
+          ==
+          '/air-yards/recent'
+          %}active-switch{%
+          endif
+          %}
+        "
+        >Recent</a
+      >
     </div>
   </div>
 </div>
@@ -20,8 +86,18 @@ layout: default
 <div class="data-container flex">
   <table id="airyards-table" class="w-full rounded-lg" data-sortable>
     <thead>
-      <tr class="text-xs text-white rounded-lg subpixel-antialiased cursor-pointer">
-        <th data-sortable="false" class="data-header cursor-auto rounded-tl-lg"></th>
+      <tr
+        class="
+          text-xs text-white
+          rounded-lg
+          subpixel-antialiased
+          cursor-pointer
+        "
+      >
+        <th
+          data-sortable="false"
+          class="data-header cursor-auto rounded-tl-lg"
+        ></th>
         <th class="text-left data-header">Player</th>
         <th class="data-header">GP</th>
         <th class="data-header">Recs</th>
@@ -29,16 +105,18 @@ layout: default
         <th class="data-header">Yards</th>
         <th class="data-header">TD</th>
         <th class="data-header">YAC</th>
-        <th class="data-header tooltip"
+        <th
+          class="data-header tooltip"
           data-tippy-animation="shift-away"
           data-tippy-inertia="true"
           data-tippy-arrow="true"
           data-tippy-placement="top-start"
           data-tippy-html="#air-yards-tooltip"
         >
-          <div class="tooltip-abbr">Air <br/>Yards</div>
+          <div class="tooltip-abbr">Air <br />Yards</div>
         </th>
-        <th class="data-header tooltip"
+        <th
+          class="data-header tooltip"
           data-tippy-animation="shift-away"
           data-tippy-inertia="true"
           data-tippy-arrow="true"
@@ -47,9 +125,10 @@ layout: default
         >
           <div class="tooltip-abbr">aDOT</div>
         </th>
-        <th class="data-header">Trgt /<br/>Game</th>
-        <th class="data-header">Air Yd /<br/>Game</th>
-        <th class="data-header tooltip"
+        <th class="data-header">Trgt /<br />Game</th>
+        <th class="data-header">Air Yd /<br />Game</th>
+        <th
+          class="data-header tooltip"
           data-tippy-animation="shift-away"
           data-tippy-inertia="true"
           data-tippy-arrow="true"
@@ -58,7 +137,8 @@ layout: default
         >
           <div class="tooltip-abbr">RACR</div>
         </th>
-        <th class="data-header px-2 rounded-tr-lg tooltip"
+        <th
+          class="data-header px-2 rounded-tr-lg tooltip"
           data-tippy-animation="shift-away"
           data-tippy-inertia="true"
           data-tippy-arrow="true"
@@ -83,25 +163,24 @@ layout: default
 
 <div id="air-yards-tooltip" class="hidden">
   <p class="text-left w-64 my-2">
-    <b>AIR YARDS</b> are <span class="italic">intent</span>:
-    the total yards thrown to a receiver (complete and incomplete passes)
+    <b>AIR YARDS</b> are <span class="italic">intent</span>: the total yards
+    thrown to a receiver (complete and incomplete passes)
   </p>
 </div>
 
 <div id="racr-tooltip" class="hidden">
   <p class="text-left w-64 my-2">
-    <b>RACR</b> is <span class="italic">efficiency</span>:
-    how well does a player convert air yards into receiving yards; tends toward the league avg
+    <b>RACR</b> is <span class="italic">efficiency</span>: how well does a
+    player convert air yards into receiving yards; tends toward the league avg
   </p>
-  <p class="text-left my-2">
-    RACR = Receiving Yards / Air Yards
-  </p>
+  <p class="text-left my-2">RACR = Receiving Yards / Air Yards</p>
 </div>
 
 <div id="wopr-tooltip" class="hidden">
   <p class="text-left my-2">
-    <b>WOPR</b> is <span class="italic">opportunity</span>:
-    weighted combination<br/> of team market share of targets and air yards<br/>
+    <b>WOPR</b> is <span class="italic">opportunity</span>: weighted
+    combination<br />
+    of team market share of targets and air yards<br />
     (based on work by Josh Hermsmeyer)
   </p>
   <p class="text-left my-2">
@@ -111,10 +190,9 @@ layout: default
 
 <div id="adot-tooltip" class="hidden">
   <p class="text-left my-2">
-    <b>aDOT</b> is <span class="italic">average depth of target</span>:
-    how many yards <br/>from the line of scrimmage is the player targeted,<br/> on average
+    <b>aDOT</b> is <span class="italic">average depth of target</span>: how many
+    yards <br />from the line of scrimmage is the player targeted,<br />
+    on average
   </p>
-  <p class="text-left my-2">
-    aDOT = Air Yards / Targets
-  </p>
+  <p class="text-left my-2">aDOT = Air Yards / Targets</p>
 </div>
